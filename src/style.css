@@ -61,7 +61,7 @@ h2 {
   background-size: contain;
 }
 #weather-conditions {
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
   list-style-type: none;
   font-size: 20px;
 }
