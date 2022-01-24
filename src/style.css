@@ -62,6 +62,9 @@ h2 {
   background-repeat: no-repeat;
   background-size: contain;
 }
+#description {
+  text-transform: capitalize;
+}
 #weather-conditions {
   padding: 10px 10px 10px 0px;
   list-style-type: none;
