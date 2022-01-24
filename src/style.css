@@ -7,7 +7,6 @@ body {
 
 h1 {
   font-size: 50px;
-  padding-bottom: 90px;
 }
 
 h2 {
@@ -56,12 +55,13 @@ h2 {
   padding: 10px 20px;
 }
 
-.currentweather {
-  background-image: url("../images/snow.svg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: contain;
+#icon-span {
+  position: center;
+  top: 0px;
+  margin: 0 auto;
+  text-align: center;
 }
+
 #description {
   text-transform: capitalize;
 }

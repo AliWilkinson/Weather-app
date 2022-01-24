@@ -78,7 +78,7 @@ function showLocationTemp(response) {
     response.data.wind.speed
   );
   document.querySelector(`#description`).innerHTML =
-    response.data.weather[0].description;
+    response.data.weather[0].main;
 }
 
 let locationButton = document.querySelector(`#location-button`);
@@ -110,7 +110,7 @@ function displayCityAndTemp(response) {
     response.data.wind.speed
   );
   document.querySelector(`#description`).innerHTML =
-    response.data.weather[0].description;
+    response.data.weather[0].main;
 }
 
 let citySearch = document.querySelector(`#city-search`);
