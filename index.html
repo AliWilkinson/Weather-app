@@ -28,82 +28,84 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="row">
-          <div class="col-5">
-            <div align="right">
-              <button id="location-button" title="Use Current Location">
-                <i class="fas fa-location-arrow"></i>
-              </button>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-5">
+              <div align="right">
+                <button id="location-button" title="Use Current Location">
+                  <i class="fas fa-location-arrow"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-7">
+              <form id="city-search">
+                <div class="form-group">
+                  <input
+                    id="city-name"
+                    type="search"
+                    class="form-control"
+                    placeholder="Search a City"
+                  />
+                </div>
+              </form>
             </div>
           </div>
-          <div class="col-7">
-            <form id="city-search">
-              <div class="form-group">
-                <input
-                  id="city-name"
-                  type="search"
-                  class="form-control"
-                  placeholder="Search a City"
-                />
-              </div>
-            </form>
+          <br />
+          <small id="date"> Date </small>
+          <small id="time">time</small>
+          <div class="currentweather">
+            <div>
+              <h1 id="city">London</h1>
+
+              <h2><span id="temp"></span>&deg;C</h2>
+            </div>
           </div>
-        </div>
-        <br />
-        <small id="date"> Date </small>
-        <small id="time">time</small>
-        <div class="currentweather">
+          <h3 id="description"></h3>
+
+          <div class="row fiveday">
+            <div class="col">
+              Mon <br />
+              <span> <i class="fas fa-cloud"></i></span>
+              <div class="temperature"><small>8 &deg;</small></div>
+            </div>
+            <div class="col">
+              Tue <br />
+              <span><i class="fas fa-cloud"></i> </span>
+              <div class="temperature"><small>8 &deg;</small></div>
+            </div>
+            <div class="col">
+              Wed <br />
+              <span><i class="fas fa-cloud"></i></span>
+              <div class="temperature"><small>8 &deg;</small></div>
+            </div>
+            <div class="col">
+              Thu <br />
+              <span><i class="fas fa-cloud"></i></span>
+              <div class="temperature"><small>8 &deg;</small></div>
+            </div>
+            <div class="col">
+              Fri<br />
+              <span><i class="fas fa-cloud"></i></span>
+              <div class="temperature"><small>8 &deg;</small></div>
+            </div>
+          </div>
+          <br />
           <div>
-            <h1 id="city">London</h1>
-
-            <h2><span id="temp"></span>&deg;C</h2>
+            <ul id="weather-conditions">
+              <li>Feels like <span id="feel-like-temp"> </span>&deg;C</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"> </span>km/h</li>
+            </ul>
           </div>
         </div>
-        <h3 id="description"></h3>
-
-        <div class="row fiveday">
-          <div class="col">
-            Mon <br />
-            <span> <i class="fas fa-cloud"></i></span>
-            <div class="temperature"><small>8 &deg;</small></div>
-          </div>
-          <div class="col">
-            Tue <br />
-            <span><i class="fas fa-cloud"></i> </span>
-            <div class="temperature"><small>8 &deg;</small></div>
-          </div>
-          <div class="col">
-            Wed <br />
-            <span><i class="fas fa-cloud"></i></span>
-            <div class="temperature"><small>8 &deg;</small></div>
-          </div>
-          <div class="col">
-            Thu <br />
-            <span><i class="fas fa-cloud"></i></span>
-            <div class="temperature"><small>8 &deg;</small></div>
-          </div>
-          <div class="col">
-            Fri<br />
-            <span><i class="fas fa-cloud"></i></span>
-            <div class="temperature"><small>8 &deg;</small></div>
-          </div>
-        </div>
-        <br />
-        <div>
-          <ul id="weather-conditions">
-            <li>Feels like <span id="feel-like-temp"> </span>&deg;C</li>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind"> </span>km/h</li>
-          </ul>
-        </div>
+        <small id="open-source">
+          <a href="https://github.com/AliWilkinson/Weather-app" target="_blank"
+            >Open-source code,</a
+          >
+          by Ali Wilkinson
+        </small>
       </div>
-      <small id="open-source">
-        <a href="https://github.com/AliWilkinson/Weather-app" target="_blank"
-          >Open-source code,</a
-        >
-        by Ali Wilkinson
-      </small>
     </div>
     <script src="src/script.js"></script>
   </body>

@@ -44,10 +44,12 @@ h2 {
   display: block;
 }
 
-.weather-app {
+.weather-app-wrapper {
   width: 500px;
   position: relative;
   margin: 0 auto;
+}
+.weather-app {
   background-color: #e8e9f4;
   border-radius: 9px;
   box-shadow: 5px 5px #c4c6d3;
@@ -77,8 +79,6 @@ h2 {
 
 #open-source {
   display: block;
-  width: 500px;
-  position: relative;
-  margin: 0 auto;
+
   padding-top: 6px;
 }
