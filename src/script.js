@@ -83,6 +83,7 @@ function showLocationTemp(response) {
     response.data.weather[0].main;
 
   document.querySelector(`#unit`).innerHTML = `C`;
+  celsiusLink.classList.add(`active`);
 }
 
 let locationButton = document.querySelector(`#location-button`);
@@ -117,6 +118,7 @@ function displayCityAndTemp(response) {
     response.data.weather[0].main;
 
   document.querySelector(`#unit`).innerHTML = `C`;
+  celsiusLink.classList.add(`active`);
 
   celsiusTemperature = response.data.main.temp;
 }
@@ -132,12 +134,16 @@ function displayFahrenheitTemperature(event) {
     (celsiusTemperature * 9) / 5 + 32
   );
   document.querySelector(`#unit`).innerHTML = `F`;
+  celsiusLink.classList.remove(`active`);
+  fahrenheitLink.classList.add(`active`);
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   document.querySelector(`#temp`).innerHTML = Math.round(celsiusTemperature);
   document.querySelector(`#unit`).innerHTML = `C`;
+  fahrenheitLink.classList.remove(`active`);
+  celsiusLink.classList.add(`active`);
 }
 
 let fahrenheitLink = document.querySelector(`#degreesF`);

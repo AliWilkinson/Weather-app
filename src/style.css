@@ -25,6 +25,14 @@ h2 {
   right: 2px;
 }
 
+.active {
+  color: #545459;
+  text-decoration: none;
+}
+
+.active:hover {
+  cursor: default;
+}
 #location-button {
   color: #464649;
   position: relative;
