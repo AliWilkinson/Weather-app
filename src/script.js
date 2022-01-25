@@ -81,9 +81,10 @@ function showLocationTemp(response) {
   );
   document.querySelector(`#description`).innerHTML =
     response.data.weather[0].main;
-
+  celsiusTemperature = response.data.main.temp;
   document.querySelector(`#unit`).innerHTML = `C`;
   celsiusLink.classList.add(`active`);
+  fahrenheitLink.classList.remove(`active`);
 }
 
 let locationButton = document.querySelector(`#location-button`);
@@ -119,6 +120,7 @@ function displayCityAndTemp(response) {
 
   document.querySelector(`#unit`).innerHTML = `C`;
   celsiusLink.classList.add(`active`);
+  fahrenheitLink.classList.remove(`active`);
 
   celsiusTemperature = response.data.main.temp;
 }
