@@ -81,6 +81,8 @@ function showLocationTemp(response) {
   );
   document.querySelector(`#description`).innerHTML =
     response.data.weather[0].main;
+
+  document.querySelector(`#unit`).innerHTML = `C`;
 }
 
 let locationButton = document.querySelector(`#location-button`);
