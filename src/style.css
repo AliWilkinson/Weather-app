@@ -16,17 +16,26 @@ h2 {
   right: 2px;
 }
 
+#degrees {
+  font-weight: bold;
+  font-size: 15px;
+  display: block;
+  text-align: right;
+  position: relative;
+  right: 2px;
+}
+
 #location-button {
   color: #464649;
   position: relative;
-  top: 2px;
-  opacity: 80%;
+  top: 1px;
+  opacity: 70%;
   box-shadow: 3px 5px 5px #c4c6d3;
   border: 0px;
   background-color: #ffffff;
   border-radius: 50%;
-  padding: 6px 11px 5px 10px;
-  border: 1px solid #d9dae2;
+  padding: 6px 12px 5px 10px;
+  border: 1px solid #d2d3db;
 }
 
 .form-group {
