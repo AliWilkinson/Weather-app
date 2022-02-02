@@ -128,7 +128,28 @@ function displayCityAndTemp(response) {
 let citySearch = document.querySelector(`#city-search`);
 citySearch.addEventListener(`submit`, handleSubmit);
 
+function displayForecast() {
+  let forecastElement = document.querySelector(`#forecast`);
+  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thr`, `Fri`];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col">
+              ${day} <br />
+              <span> <i class="fas fa-cloud"></i></span>
+              <div class="temperature"><small>8 &deg;</small></div>
+            </div> `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 searchCity(`London`);
+displayForecast();
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
