@@ -123,12 +123,15 @@ function displayCityAndTemp(response) {
   fahrenheitLink.classList.remove(`active`);
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 let citySearch = document.querySelector(`#city-search`);
 citySearch.addEventListener(`submit`, handleSubmit);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector(`#forecast`);
   let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thr`, `Fri`];
 
@@ -148,8 +151,15 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = `5c086425194ae4da9c42b9089eab65e7`;
+  let apiUrlForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrlForecast);
+  axios.get(apiUrlForecast).then(displayForecast);
+}
+
 searchCity(`London`);
-displayForecast();
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
