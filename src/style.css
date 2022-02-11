@@ -16,20 +16,6 @@ h2 {
   right: 2px;
 }
 
-#degrees {
-  font-weight: bold;
-  font-size: 15px;
-  display: block;
-  text-align: right;
-  position: relative;
-  right: 2px;
-}
-
-.active {
-  color: #545459;
-  text-decoration: none;
-}
-
 .active:hover {
   cursor: default;
 }

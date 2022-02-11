@@ -118,10 +118,6 @@ function displayCityAndTemp(response) {
   document.querySelector(`#description`).innerHTML =
     response.data.weather[0].main;
 
-  document.querySelector(`#unit`).innerHTML = `C`;
-  celsiusLink.classList.add(`active`);
-  fahrenheitLink.classList.remove(`active`);
-
   celsiusTemperature = response.data.main.temp;
 
   getForecast(response.data.coord);
@@ -192,12 +188,4 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   document.querySelector(`#temp`).innerHTML = Math.round(celsiusTemperature);
   document.querySelector(`#unit`).innerHTML = `C`;
-  fahrenheitLink.classList.remove(`active`);
-  celsiusLink.classList.add(`active`);
 }
-
-let fahrenheitLink = document.querySelector(`#degreesF`);
-fahrenheitLink.addEventListener(`click`, displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector(`#degreesC`);
-celsiusLink.addEventListener(`click`, displayCelsiusTemperature);
