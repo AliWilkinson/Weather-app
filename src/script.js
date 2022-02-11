@@ -130,21 +130,38 @@ function displayCityAndTemp(response) {
 let citySearch = document.querySelector(`#city-search`);
 citySearch.addEventListener(`submit`, handleSubmit);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector(`#forecast`);
-  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thr`, `Fri`];
 
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-    <div class="col">
-              ${day} <br />
-              <span> <i class="fas fa-cloud"></i></span>
-              <div class="temperature"><small>8 &deg;</small></div>
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+    <div class="col"> <div calss="weather-forecast-data">
+              ${formatDay(forecastDay.dt)} <br />
+            
+              <span> <img 
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png" width="50"</span>
+              <div class="temperature">${Math.round(
+                forecastDay.temp.max
+              )}&deg; ${Math.round(
+          forecastDay.temp.min
+        )}&deg;<small></small></div>
+            </div>
             </div> `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
