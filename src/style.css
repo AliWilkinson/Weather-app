@@ -1,5 +1,5 @@
 body {
-  color: #545459;
+  color: #414146;
   font-family: "Questrial", sans-serif;
   padding: 50px;
   background-color: #ffffff;
@@ -7,24 +7,35 @@ body {
 
 h1 {
   font-size: 50px;
+  color: #f3edf0;
+  position: relative;
+  left: 20px;
 }
 
 h2 {
-  font-size: 30px;
+  font-weight: bold;
+  font-size: 100px;
   text-align: right;
   position: relative;
-  right: 2px;
+  right: 50px;
 }
 
+h3 {
+  font-weight: bold;
+  font-size: 30px;
+
+  position: relative;
+  left: 20px;
+  top: -80px;
+}
 .active:hover {
   cursor: default;
 }
 #location-button {
   color: #464649;
   position: relative;
-  top: 1px;
-  opacity: 70%;
-  box-shadow: 3px 5px 5px #c4c6d3;
+  top: 10px;
+  opacity: 90%;
   border: 0px;
   background-color: #ffffff;
   border-radius: 50%;
@@ -33,17 +44,20 @@ h2 {
 }
 
 .form-group {
-  opacity: 70%;
-  box-shadow: 3px 5px 5px #c4c6d3;
+  opacity: 90%;
+  padding-right: 20px;
+  padding-top: 10px;
 }
 
 #date {
   text-align: center;
   display: block;
+  color: #f3edf0;
 }
 #time {
   text-align: center;
   display: block;
+  color: #f3edf0;
 }
 
 .weather-app-wrapper {
@@ -52,10 +66,11 @@ h2 {
   margin: 0 auto;
 }
 .weather-app {
-  background-color: #e8e9f4;
   border-radius: 9px;
-  box-shadow: 5px 5px #c4c6d3;
-  padding: 10px 20px;
+  padding: 0px 0px 0px;
+  background-image: url("../images/ba.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #icon-span {
@@ -69,22 +84,33 @@ h2 {
   text-transform: capitalize;
 }
 #weather-conditions {
-  padding: 10px 10px 10px 0px;
+  padding: 10px 0px 0px 20px;
   list-style-type: none;
   font-size: 20px;
 }
 
+.lower-section {
+  background-color: rgba(250, 250, 250, 0.5);
+  position: relative;
+  border-radius: 100px 100px 9px 9px;
+}
+
 .fiveday-forecast {
   text-align: center;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+
   font-size: 20px;
-  background-color: #ffffff;
+  background-color: #f3edf0;
   padding-bottom: 10px;
   border-radius: 9px;
   box-shadow: 3px 3px 5px #c4c6d3;
+  width: 490px;
 }
 
 #open-source {
   display: block;
 
-  padding-top: 6px;
+  padding: 5px 0px 10px 20px;
 }
