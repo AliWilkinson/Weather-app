@@ -7,27 +7,29 @@ body {
 
 h1 {
   font-size: 50px;
-  color: #f3edf0;
-  position: relative;
-  left: 20px;
+  color: #414146;
+  text-align: center;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 100px;
-  text-align: right;
-  position: relative;
-  right: 50px;
+  font-size: 90px;
 }
 
 h3 {
   font-weight: bold;
   font-size: 30px;
-
-  position: relative;
-  left: 20px;
-  top: -80px;
+  text-align: center;
+  padding-bottom: 10px;
 }
+
+#icon {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+}
+
 .active:hover {
   cursor: default;
 }
@@ -90,7 +92,7 @@ h3 {
 }
 
 .lower-section {
-  background-color: rgba(250, 250, 250, 0.5);
+  background-color: rgba(250, 250, 250, 0.7);
   position: relative;
   border-radius: 100px 100px 9px 9px;
 }

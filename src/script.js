@@ -83,8 +83,13 @@ function showLocationTemp(response) {
     response.data.weather[0].main;
   celsiusTemperature = response.data.main.temp;
   document.querySelector(`#unit`).innerHTML = `C`;
-  celsiusLink.classList.add(`active`);
-  fahrenheitLink.classList.remove(`active`);
+
+  let iconElement = document.querySelector(`#icon`);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let locationButton = document.querySelector(`#location-button`);
@@ -117,6 +122,13 @@ function displayCityAndTemp(response) {
   );
   document.querySelector(`#description`).innerHTML =
     response.data.weather[0].main;
+
+  let iconElement = document.querySelector(`#icon`);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
 
